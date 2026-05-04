@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Haarwelt Kassel – Friseursalon in Bettenhausen. Schnitte, Colorationen, Balayage, Brautstyling. Jetzt Termin: 0561 / 53769">
+<title>Haarwelt Kassel – Friseursalon Bettenhausen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #F7F4EE;
+  --surface:  #FEFCF8;
+  --dark:     #181816;
+  --mid:      #58564F;
+  --faint:    #9A9890;
+  --accent:   #8C6D5C;
+  --accent2:  #E4D9D0;
+  --gold:     #B89575;
+  --line:     rgba(24,24,22,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--dark);overflow-x:hidden;}
+
+/* ── ANNOUNCE ── */
+.bar{
+  background:var(--dark);color:rgba(255,255,255,.7);
+  text-align:center;padding:.55rem 1rem;
+  font-size:.75rem;letter-spacing:.06em;
+}
+.bar a{color:var(--gold);text-decoration:none;font-weight:500;}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(247,244,238,.97);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 3rem;
+}
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.55rem;letter-spacing:.02em;
+  color:var(--dark);text-decoration:none;
+  display:flex;align-items:baseline;gap:.05em;
+}
+.logo-accent{color:var(--accent);}
+.nav-links{display:flex;gap:2.25rem;list-style:none;}
+.nav-links a{
+  font-size:.75rem;font-weight:500;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mid);text-decoration:none;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--dark);}
+.nav-cta{
+  background:var(--dark);color:#fff;
+  padding:.6rem 1.5rem;border-radius:2px;
+  font-size:.75rem;font-weight:500;letter-spacing:.09em;
+  text-transform:uppercase;text-decoration:none;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--accent);}
+
+/* ── HERO ── */
+.hero{
+  display:grid;grid-template-columns:56% 44%;
+  min-height:93vh;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:6rem 4rem 6rem 3rem;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:.8rem;
+  font-size:.68rem;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:2rem;
+}
+.eyebrow::before{content:'';width:2.5rem;height:1px;background:var(--accent);}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5vw,4.8rem);
+  line-height:1.02;font-weight:600;margin-bottom:1.5rem;
+  letter-spacing:-.01em;
+}
+h1 em{font-style:italic;color:var(--accent);}
+.hero-sub{
+  font-size:.97rem;color:var(--mid);line-height:1.8;
+  max-width:400px;margin-bottom:2.75rem;font-weight:300;
+}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3.25rem;}
+.btn-fill{
+  background:var(--dark);color:#fff;
+  padding:.88rem 2rem;border-radius:2px;
+  font-size:.78rem;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;
+  transition:background .2s,transform .15s;display:inline-block;
+}
+.btn-fill:hover{background:var(--accent);transform:translateY(-1px);}
+.btn-ring{
+  border:1.5px solid var(--dark);color:var(--dark);
+  padding:.88rem 2rem;border-radius:2px;
+  font-size:.78rem;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;
+  transition:all .2s;display:inline-block;
+}
+.btn-ring:hover{background:var(--dark);color:#fff;}
+.hero-stats{
+  display:flex;gap:2.75rem;
+  padding-top:2.25rem;border-top:1px solid var(--line);
+}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.9rem;font-weight:600;color:var(--dark);line-height:1;
+}
+.stat-l{font-size:.7rem;color:var(--faint);margin-top:.3rem;letter-spacing:.04em;}
+
+/* hero right */
+.hero-right{
+  background:var(--dark);position:relative;overflow:hidden;
+}
+.hero-glow{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 40%,rgba(140,109,92,.22) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 40% at 75% 75%,rgba(184,149,117,.12) 0%,transparent 55%);
+}
+.hero-grid-lines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.hero-panel{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:2.5rem 2.5rem 2.5rem;
+  background:linear-gradient(to top,rgba(18,18,16,.98) 0%,rgba(18,18,16,.5) 70%,transparent 100%);
+}
+.panel-row{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.07);
+}
+.panel-row:last-child{border:none;padding-bottom:0;}
+.panel-icon{
+  width:36px;height:36px;flex-shrink:0;
+  border:1px solid rgba(184,149,117,.3);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:.1rem;
+}
+.panel-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.panel-label{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.panel-val{font-size:.9rem;color:rgba(255,255,255,.88);margin-top:.2rem;font-weight:300;}
+.panel-val a{color:var(--gold);text-decoration:none;}
+
+/* ── MARQUEE ── */
+.marquee-wrap{
+  background:var(--accent);padding:.65rem 0;
+  overflow:hidden;white-space:nowrap;
+}
+.marquee-track{
+  display:inline-flex;gap:0;
+  animation:slide 22s linear infinite;
+}
+.marquee-track span{
+  font-size:.7rem;font-weight:500;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.88);
+  padding:0 1.8rem;
+}
+.marquee-track span::after{content:'·';margin-left:1.8rem;opacity:.4;}
+@keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ── LEISTUNGEN ── */
+.leistungen{background:var(--surface);padding:6rem 3rem;}
+.section-head{margin-bottom:3.5rem;max-width:580px;}
+.section-head p{font-size:.93rem;color:var(--mid);line-height:1.8;font-weight:300;}
+.eyebrow-sm{
+  display:flex;align-items:center;gap:.7rem;
+  font-size:.66rem;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;
+}
+.eyebrow-sm::before{content:'';width:1.75rem;height:1px;background:var(--accent);}
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.85rem,3.5vw,3rem);
+  font-weight:600;line-height:1.12;margin-bottom:1.25rem;
+}
+.l-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--line);
+}
+.l-card{
+  padding:2.25rem 2rem;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  transition:background .2s;
+}
+.l-card:hover{background:var(--bg);}
+.l-card:nth-child(3n){border-right:none;}
+.l-card:nth-child(4),.l-card:nth-child(5),.l-card:nth-child(6){border-bottom:none;}
+.l-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;color:var(--accent2);font-weight:600;
+  line-height:1;margin-bottom:.8rem;
+}
+.l-title{font-size:.97rem;font-weight:500;margin-bottom:.55rem;}
+.l-desc{font-size:.82rem;color:var(--mid);line-height:1.7;font-weight:300;}
+.l-price{
+  margin-top:1.25rem;padding-top:.9rem;
+  border-top:1px solid var(--line);
+  font-size:.75rem;color:var(--accent);font-weight:500;letter-spacing:.03em;
+}
+
+/* ── PREISE ── */
+.preise{background:var(--bg);padding:6rem 3rem;}
+.preise-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem;}
+.preise-top p{font-size:.88rem;color:var(--mid);line-height:1.75;font-weight:300;max-width:380px;}
+.tabs{display:flex;gap:.4rem;}
+.tab-btn{
+  padding:.45rem 1.2rem;font-size:.73rem;font-weight:500;
+  letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:2px;
+  cursor:pointer;background:transparent;color:var(--mid);
+  transition:all .2s;font-family:'Outfit',sans-serif;
+}
+.tab-btn.active,.tab-btn:hover{background:var(--dark);color:#fff;border-color:var(--dark);}
+.price-table{display:none;}
+.price-table.active{display:block;}
+table{width:100%;border-collapse:collapse;background:var(--surface);}
+thead tr{border-bottom:1px solid var(--line);}
+th{
+  text-align:left;font-size:.66rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);padding:.75rem 1.25rem;
+}
+th:not(:first-child){text-align:center;}
+td{
+  padding:.8rem 1.25rem;border-bottom:1px solid var(--line);
+  font-size:.86rem;color:var(--dark);font-weight:300;
+}
+td:not(:first-child){text-align:center;color:var(--accent);font-weight:500;}
+tr:last-child td{border:none;}
+tbody tr:hover td{background:var(--bg);}
+.price-note{font-size:.75rem;color:var(--faint);margin-top:.9rem;font-style:italic;}
+
+/* ── ÜBER ── */
+.ueber{background:var(--dark);color:#fff;padding:6rem 3rem;}
+.ueber .eyebrow-sm{color:var(--gold);}
+.ueber .eyebrow-sm::before{background:var(--gold);}
+.ueber h2{color:#fff;}
+.ueber-grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center;}
+.ueber-body{font-size:.93rem;color:rgba(255,255,255,.55);line-height:1.9;font-weight:300;margin-bottom:1.25rem;}
+.ueber-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem;}
+.tag{
+  padding:.28rem .9rem;border:1px solid rgba(184,149,117,.3);
+  border-radius:2px;font-size:.68rem;font-weight:500;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--gold);
+}
+.ueber-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:2px;overflow:hidden;
+}
+.ueber-card-row{
+  display:flex;align-items:flex-start;gap:1.25rem;
+  padding:1.25rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.ueber-card-row:last-child{border:none;}
+.u-icon-wrap{
+  width:38px;height:38px;flex-shrink:0;
+  background:rgba(140,109,92,.18);border:1px solid rgba(140,109,92,.25);
+  border-radius:2px;display:flex;align-items:center;justify-content:center;
+  margin-top:.05rem;
+}
+.u-icon-wrap svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.u-label{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);}
+.u-val{font-size:.9rem;color:rgba(255,255,255,.85);margin-top:.2rem;font-weight:300;}
+.u-val a{color:var(--gold);text-decoration:none;}
+
+/* ── BEWERTUNGEN ── */
+.bewertungen{background:var(--surface);padding:6rem 3rem;}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.b-card{
+  padding:2rem;border:1px solid var(--line);
+  background:var(--bg);border-radius:2px;
+  transition:border-color .2s,transform .15s;
+}
+.b-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+.b-stars{
+  display:flex;gap:2px;margin-bottom:1.1rem;
+}
+.b-stars svg{width:13px;height:13px;fill:var(--gold);}
+.b-text{font-size:.86rem;color:var(--mid);line-height:1.8;font-style:italic;margin-bottom:1.25rem;font-weight:300;}
+.b-author{font-size:.78rem;font-weight:500;color:var(--dark);}
+.b-source{font-size:.68rem;color:var(--faint);margin-top:.15rem;}
+
+/* ── KONTAKT ── */
+.kontakt{background:var(--bg);padding:6rem 3rem;}
+.k-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;max-width:980px;}
+.k-info h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:600;margin-bottom:1.75rem;
+}
+.k-row{
+  display:flex;align-items:flex-start;gap:1.1rem;
+  padding:1.1rem 0;border-bottom:1px solid var(--line);
+}
+.k-row:last-of-type{border:none;}
+.k-icon-wrap{
+  width:36px;height:36px;flex-shrink:0;
+  background:var(--dark);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:.05rem;
+}
+.k-icon-wrap svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.k-label{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+.k-val{font-size:.9rem;color:var(--dark);margin-top:.2rem;font-weight:300;}
+.k-val a{color:var(--accent);text-decoration:none;}
+label{
+  display:block;font-size:.66rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:.45rem;
+}
+input,select,textarea{
+  width:100%;padding:.8rem 1rem;margin-bottom:1.1rem;
+  border:1px solid var(--line);background:var(--surface);
+  font-family:'Outfit',sans-serif;font-size:.9rem;
+  color:var(--dark);border-radius:2px;
+  transition:border-color .2s;appearance:none;outline:none;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);}
+textarea{min-height:88px;resize:vertical;}
+.submit{
+  width:100%;padding:.92rem;background:var(--dark);
+  color:#fff;border:none;border-radius:2px;
+  font-family:'Outfit',sans-serif;font-size:.78rem;
+  font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;transition:background .2s;
+}
+.submit:hover{background:var(--accent);}
+
+/* ── MAP ── */
+.map-wrap{height:280px;}
+.map-wrap iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.6)contrast(1.05);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--dark);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  padding:1.6rem 3rem;
+}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;color:#fff;text-decoration:none;
+  letter-spacing:.02em;
+}
+footer span{font-size:.73rem;color:rgba(255,255,255,.35);}
+footer a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+footer a:hover{color:var(--gold);}
+
+/* ── WA FLOAT ── */
+.wa{
+  position:fixed;bottom:1.75rem;right:1.75rem;z-index:200;
+  width:48px;height:48px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 18px rgba(37,211,102,.35);
+  transition:transform .2s;text-decoration:none;
+}
+.wa:hover{transform:scale(1.08);}
+.wa svg{width:22px;height:22px;fill:#fff;}
+
+/* ── ANIMATIONS ── */
+@keyframes up{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero-left>*{animation:up .55s ease both;opacity:0;}
+.hero-left>*:nth-child(1){animation-delay:.05s;}
+.hero-left>*:nth-child(2){animation-delay:.16s;}
+.hero-left>*:nth-child(3){animation-delay:.26s;}
+.hero-left>*:nth-child(4){animation-delay:.36s;}
+.hero-left>*:nth-child(5){animation-delay:.46s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{min-height:260px;}
+  .hero-left{padding:3rem 1.5rem;}
+  .leistungen,.preise,.ueber,.bewertungen,.kontakt{padding:4rem 1.5rem;}
+  .l-grid{grid-template-columns:1fr;}
+  .l-card{border-right:none!important;}
+  .l-card:nth-child(4),.l-card:nth-child(5){border-bottom:1px solid var(--line)!important;}
+  .ueber-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .b-grid{grid-template-columns:1fr;}
+  .k-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .preise-top{flex-direction:column;align-items:flex-start;}
+  footer{flex-direction:column;text-align:center;padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  Neu-Kunden-Angebot: 10 % auf Ihre erste Coloration — <a href="tel:056153769">Jetzt anrufen</a>
+</div>
+
+<nav>
+  <a href="#" class="logo">Haar<span class="logo-accent">welt</span></a>
+  <ul class="nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#preise">Preise</a></li>
+    <li><a href="#ueber">Über uns</a></li>
+    <li><a href="#kontakt" class="nav-cta">Termin buchen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Friseursalon · Kassel-Bettenhausen</div>
+    <h1>Ihr Haar.<br>Ihr <em>Auftritt</em>.</h1>
+    <p class="hero-sub">Schnitte, Colorationen und Balayage mit Wella, Goldwell und GHD — individuell, ehrlich, auf Sie abgestimmt.</p>
+    <div class="hero-btns">
+      <a href="tel:056153769" class="btn-fill">0561 / 53769 anrufen</a>
+      <a href="#kontakt" class="btn-ring">Termin anfragen</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">Mo–Sa</div><div class="stat-l">Geöffnet</div></div>
+      <div><div class="stat-n">4.8 ★</div><div class="stat-l">Google-Bewertung</div></div>
+      <div><div class="stat-n">Wella</div><div class="stat-l">Goldwell · GHD</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-glow"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-panel">
+      <div class="panel-row">
+        <div class="panel-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="panel-label">Adresse</div>
+          <div class="panel-val">Leipziger Str. 179 · 34123 Kassel</div>
+        </div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="panel-label">Öffnungszeiten</div>
+          <div class="panel-val">Mo–Fr: 08–18 Uhr &nbsp;·&nbsp; Sa: 08–14 Uhr</div>
+        </div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="panel-label">Telefon</div>
+          <div class="panel-val"><a href="tel:056153769">0561 / 53769</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Haarschnitte</span><span>Colorationen</span><span>Balayage</span>
+    <span>Dauerwellen</span><span>Brautstyling</span><span>Haarverlängerung</span>
+    <span>Wella Professional</span><span>Goldwell</span><span>GHD</span>
+    <span>Haarschnitte</span><span>Colorationen</span><span>Balayage</span>
+    <span>Dauerwellen</span><span>Brautstyling</span><span>Haarverlängerung</span>
+    <span>Wella Professional</span><span>Goldwell</span><span>GHD</span>
+  </div>
+</div>
+
+<!-- LEISTUNGEN -->
+<section class="leistungen" id="leistungen">
+  <div class="section-head">
+    <div class="eyebrow-sm">Leistungen</div>
+    <h2>Was wir für Sie tun</h2>
+    <p>Von der klassischen Pflege bis zum Hochzeitsstyling — mit hochwertigen Produkten und echter Handwerkskunst.</p>
+  </div>
+  <div class="l-grid">
+    <div class="l-card">
+      <div class="l-num">01</div>
+      <div class="l-title">Schnitte & Föhnstyling</div>
+      <div class="l-desc">Waschen, Schneiden und Föhnen für Damen, Herren und Kinder — typgerecht und auf Sie abgestimmt.</div>
+      <div class="l-price">Damen ab 55 € · Herren ab 28 € · Kinder ab 18 €</div>
+    </div>
+    <div class="l-card">
+      <div class="l-num">02</div>
+      <div class="l-title">Colorationen & Färben</div>
+      <div class="l-desc">Volltonfarben, Ansatz, Illumina, Nectaya — mit Wella und Goldwell für strahlende, langanhaltende Farbe.</div>
+      <div class="l-price">Ansatz ab 45 € · Neufärbung ab 74 €</div>
+    </div>
+    <div class="l-card">
+      <div class="l-num">03</div>
+      <div class="l-title">Balayage & Strähnen</div>
+      <div class="l-desc">Folien- und Haubensträhnen, Balayage — für natürliche Farbverläufe und modernen Sonnenschein-Effekt.</div>
+      <div class="l-price">Haubensträhnen ab 45 € · Folien ab 69 €</div>
+    </div>
+    <div class="l-card">
+      <div class="l-num">04</div>
+      <div class="l-title">Dauerwellen</div>
+      <div class="l-desc">Standard, Comfort und Spezial — dauerhafter Halt und Volumen mit professionellen Produkten.</div>
+      <div class="l-price">ab 123 € (kurz) · bis 180 € (lang/Spezial)</div>
+    </div>
+    <div class="l-card">
+      <div class="l-num">05</div>
+      <div class="l-title">Braut- & Hochzeitsstyling</div>
+      <div class="l-desc">Hochsteckfrisuren für Ihren besonderen Tag — auf Wunsch mit Probetermin und persönlicher Beratung.</div>
+      <div class="l-price">Hochstecken ab 55 € · nach Absprache</div>
+    </div>
+    <div class="l-card">
+      <div class="l-num">06</div>
+      <div class="l-title">Pflege & Beauty</div>
+      <div class="l-desc">Kurpackungen, Wimpern- und Augenbrauenbehandlungen, Make-up, Haarverlängerung auf Anfrage.</div>
+      <div class="l-price">Kurpackung ab 10 € · Wimpern 12 €</div>
+    </div>
+  </div>
+</section>
+
+<!-- PREISE -->
+<section class="preise" id="preise">
+  <div class="preise-top">
+    <div>
+      <div class="eyebrow-sm">Preisübersicht</div>
+      <h2>Klare Preise,<br>keine Überraschungen</h2>
+      <p>Alle Preise inkl. 19 % MwSt. Die Preise richten sich nach Haarlänge: kurz · halblang · lang.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('damen',this)">Damen</button>
+      <button class="tab-btn" onclick="showTab('herren',this)">Herren</button>
+      <button class="tab-btn" onclick="showTab('color',this)">Farbe</button>
+    </div>
+  </div>
+
+  <div class="price-table active" id="tab-damen">
+    <table>
+      <thead><tr><th>Leistung</th><th>Kurz</th><th>Halblang</th><th>Lang</th></tr></thead>
+      <tbody>
+        <tr><td>Waschen & Legen</td><td>28 €</td><td>31 €</td><td>35 €</td></tr>
+        <tr><td>Waschen & Föhnen</td><td>29 €</td><td>33 €</td><td>36 €</td></tr>
+        <tr><td>Waschen, Schneiden & Legen</td><td>53,50 €</td><td>57 €</td><td>61 €</td></tr>
+        <tr><td>Waschen, Schneiden & Föhnen</td><td>55 €</td><td>60 €</td><td>63 €</td></tr>
+        <tr><td>Kurpackung</td><td>10 €</td><td>12 €</td><td>15 €</td></tr>
+        <tr><td>Hochstecken</td><td colspan="3" style="text-align:center;color:var(--mid);font-weight:300;">ab 55 € · nach Absprache</td></tr>
+      </tbody>
+    </table>
+    <p class="price-note">Preise für Kinder & Jugendliche auf Anfrage.</p>
+  </div>
+  <div class="price-table" id="tab-herren">
+    <table>
+      <thead><tr><th>Leistung</th><th>Preis</th></tr></thead>
+      <tbody>
+        <tr><td>Waschen & Föhnen</td><td>ab 29 €</td></tr>
+        <tr><td>Waschen, Schneiden & Föhnen</td><td>ab 38 €</td></tr>
+        <tr><td>Augenbrauen zupfen / rasieren</td><td>ab 10 €</td></tr>
+        <tr><td>Wachsen</td><td>15 €</td></tr>
+        <tr><td>Make-up</td><td>ab 39 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="price-table" id="tab-color">
+    <table>
+      <thead><tr><th>Leistung</th><th>Kurz</th><th>Halblang</th><th>Lang</th></tr></thead>
+      <tbody>
+        <tr><td>Neufärbung</td><td>74 €</td><td>79 €</td><td>93 €</td></tr>
+        <tr><td>Ansatz färben</td><td>45 €</td><td>50 €</td><td>56 €</td></tr>
+        <tr><td>Hellerfärbung</td><td>53 €</td><td>58 €</td><td>64,50 €</td></tr>
+        <tr><td>Illumina / Nectaya</td><td>53 €</td><td>59,50 €</td><td>68 €</td></tr>
+        <tr><td>Tönen</td><td>37,50 €</td><td>42 €</td><td>48 €</td></tr>
+        <tr><td>Haubensträhnen</td><td colspan="3" style="text-align:center;">45 €</td></tr>
+        <tr><td>Foliensträhnen</td><td>69 €</td><td>77 €</td><td>ab 100 €</td></tr>
+        <tr><td>Wimpern färben</td><td colspan="3" style="text-align:center;">12 €</td></tr>
+        <tr><td>Augenbrauen färben</td><td colspan="3" style="text-align:center;">10 €</td></tr>
+        <tr><td>Haarverlängerung</td><td colspan="3" style="text-align:center;color:var(--mid);font-weight:300;">Preis auf Anfrage</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section class="ueber" id="ueber">
+  <div class="ueber-grid">
+    <div>
+      <div class="eyebrow-sm">Über uns</div>
+      <h2>Ihr Salon in Bettenhausen</h2>
+      <p class="ueber-body">Haarwelt Kassel steht seit Jahren für Qualität, Persönlichkeit und echte Handwerkskunst. Unser Team nimmt sich Zeit für jeden Kunden — individuell, ehrlich, ohne Hetze.</p>
+      <p class="ueber-body">Wir arbeiten ausschließlich mit professionellen Produkten von Wella, Goldwell, GHD und Forever KAO — für Ergebnisse, die wirklich halten.</p>
+      <div class="ueber-tags">
+        <span class="tag">Wella Professional</span>
+        <span class="tag">Goldwell</span>
+        <span class="tag">GHD</span>
+        <span class="tag">Forever KAO</span>
+        <span class="tag">Newsha</span>
+        <span class="tag">Brautstyling</span>
+        <span class="tag">Haarverlängerung</span>
+      </div>
+    </div>
+    <div class="ueber-card">
+      <div class="ueber-card-row">
+        <div class="u-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="u-label">Adresse</div>
+          <div class="u-val">Leipziger Str. 179 · 34123 Kassel-Bettenhausen</div>
+        </div>
+      </div>
+      <div class="ueber-card-row">
+        <div class="u-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="u-label">Telefon</div>
+          <div class="u-val"><a href="tel:056153769">0561 / 53769</a></div>
+        </div>
+      </div>
+      <div class="ueber-card-row">
+        <div class="u-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="u-label">Öffnungszeiten</div>
+          <div class="u-val">Mo–Fr: 08–18 Uhr &nbsp;·&nbsp; Sa: 08–14 Uhr</div>
+        </div>
+      </div>
+      <div class="ueber-card-row">
+        <div class="u-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div>
+          <div class="u-label">Stellen</div>
+          <div class="u-val"><a href="#kontakt">Wir suchen Verstärkung — jetzt bewerben</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEWERTUNGEN -->
+<section class="bewertungen" id="bewertungen">
+  <div class="eyebrow-sm">Kundenstimmen</div>
+  <h2>Was unsere Kunden sagen</h2>
+  <div class="b-grid">
+    <div class="b-card">
+      <div class="b-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="b-text">„Hier fühle ich mich seit Jahren in guten Händen. Die Beratung ist ehrlich, das Ergebnis immer top — und die Atmosphäre macht den Unterschied."</p>
+      <div class="b-author">Sandra K.</div>
+      <div class="b-source">Google · Kassel-Bettenhausen</div>
+    </div>
+    <div class="b-card">
+      <div class="b-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="b-text">„Mein Balayage ist jedes Mal ein Highlight — buchstäblich. Ich komme seit 3 Jahren regelmäßig und würde niemals woanders hingehen."</p>
+      <div class="b-author">Miriam T.</div>
+      <div class="b-source">Google · Kassel</div>
+    </div>
+    <div class="b-card">
+      <div class="b-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="b-text">„Das Brautstyling war perfekt. Kein Stress, alles saß genau richtig. Danke für diesen besonderen Moment — wirklich unschlagbar."</p>
+      <div class="b-author">Laura M.</div>
+      <div class="b-source">Google · Kassel-Nord</div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="kontakt" id="kontakt">
+  <div class="k-grid">
+    <div class="k-info">
+      <div class="eyebrow-sm">Kontakt</div>
+      <h3>Termin vereinbaren</h3>
+      <div class="k-row">
+        <div class="k-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="k-label">Adresse</div>
+          <div class="k-val">Leipziger Str. 179<br>34123 Kassel-Bettenhausen</div>
+        </div>
+      </div>
+      <div class="k-row">
+        <div class="k-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="k-label">Telefon</div>
+          <div class="k-val"><a href="tel:056153769">0561 / 53769</a></div>
+        </div>
+      </div>
+      <div class="k-row">
+        <div class="k-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="k-label">Öffnungszeiten</div>
+          <div class="k-val">Mo–Fr: 08–18 Uhr<br>Sa: 08–14 Uhr</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>Ihr Name</label>
+      <input type="text" placeholder="Maria Muster">
+      <label>Telefon oder E-Mail</label>
+      <input type="text" placeholder="0561 / …">
+      <label>Gewünschte Leistung</label>
+      <select>
+        <option>Schnitt & Styling</option>
+        <option>Coloration / Balayage</option>
+        <option>Dauerwelle</option>
+        <option>Braut- / Hochzeitsstyling</option>
+        <option>Haarverlängerung</option>
+        <option>Sonstiges / Bewerbung</option>
+      </select>
+      <label>Wunschtermin (optional)</label>
+      <textarea placeholder="z. B. Dienstag Vormittag…"></textarea>
+      <button class="submit">Terminanfrage senden</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-wrap">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494!2d9.535!3d51.318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDE5JzA1LjAiTiA5wrAzMicwNi4wIkU!5e0!3m2!1sde!2sde!4v1700000000" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<footer>
+  <a href="#" class="footer-logo">Haarwelt Kassel</a>
+  <span>Leipziger Str. 179 · 34123 Kassel · Tel. 0561 / 53769</span>
+  <span><a href="#">Impressum</a> &nbsp;·&nbsp; <a href="#">Datenschutz</a></span>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/4956153769" class="wa" title="WhatsApp schreiben">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.price-table').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
